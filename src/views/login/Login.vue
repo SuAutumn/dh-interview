@@ -1,6 +1,22 @@
 <template>
-  <div class="login">
-    <button @click="login">Sign In</button>
+  <div class="login flex-col flex-h-center">
+    <div class="input">
+      <input
+        type="text"
+        v-model="username"
+        placeholder="请输入手机号/邮箱"
+        class="username"
+      />
+      <input
+        type="text"
+        v-model="password"
+        placeholder="请输入密码"
+        class="password"
+      />
+    </div>
+    <button @click="login" class="btn-sign-in pr">
+      <div>登录</div>
+    </button>
   </div>
 </template>
 <script>
@@ -11,10 +27,13 @@ export default {
     return {
       username: '',
       password: '',
+      isLoading: false,
     }
   },
   methods: {
     async login() {
+      if (this.isLoading) return
+      this.isLoading = true
       this.username = 'zhangp'
       this.password = '123456'
       try {
@@ -24,8 +43,44 @@ export default {
         this.toast.show(e.message)
         console.log(e)
       }
+      this.isLoading = false
     },
   },
 }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/css/var.scss';
+.login {
+  font-size: $text_default_size;
+  height: 80vh;
+  .input {
+  }
+  .username,
+  .password {
+    display: block;
+    margin: 14px auto;
+    padding: $default_padding;
+    border: 1px solid $gray;
+    border-radius: $default_radius;
+    transition: border 0.3s;
+    height: 36px;
+    line-height: 36px;
+    width: 68%;
+    max-width: 200px;
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  .btn-sign-in {
+    width: 68%;
+    max-width: 200px;
+    background-color: $primary;
+    color: $text_white;
+    border: 1px solid $primary;
+    border-radius: $default_radius;
+    height: 36px;
+    line-height: 36px;
+    margin: 20px auto;
+  }
+}
+</style>
