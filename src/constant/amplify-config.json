@@ -1,0 +1,7 @@
+{
+  "Auth": {
+    "userPoolId": "ap-southeast-2_Oswc4Z75E",
+    "userPoolWebClientId": "3vhfic5hikq7v6fg9fs2352jtn",
+    "region": "ap-southeast-2"
+  }
+}
