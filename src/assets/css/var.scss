@@ -3,5 +3,13 @@ $default_padding: 8px;
 $default_margin: $default_padding;
 $default_radius: $default_padding / 1.5;
 
+// color
+$gray: #ccc;
+$white: #fff;
+$primary: rgb(97, 97, 253);
+
 // text color
-$text_white: #fff;
+$text_white: $white;
+
+// text size
+$text_default_size: 14px;

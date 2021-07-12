@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+.pr {
+  position: relative;
+}
 // margin and padding setting
 @for $i from 1 through 30 {
   @if $i > 4 {
