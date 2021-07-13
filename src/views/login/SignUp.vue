@@ -16,9 +16,10 @@ export default {
   },
   methods: {
     async signUp() {
-      this.username = 'zhangp'
-      this.password = '123456'
+      this.username = '909153789@qq.com'
+      this.password = '123456zp'
       try {
+        // const hash = 'vw+5MePc3ibKJHr+eG3oIgvg2Hg3CmUUiKBIDLQmLtw='
         const user = await api.signUp(this.username, this.password)
         console.log(user)
       } catch (e) {

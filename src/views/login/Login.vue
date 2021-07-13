@@ -4,18 +4,21 @@
       <input
         type="text"
         v-model="username"
-        placeholder="请输入手机号/邮箱"
+        placeholder="Phone number or email"
         class="username"
       />
       <input
         type="text"
         v-model="password"
-        placeholder="请输入密码"
+        placeholder="Password"
         class="password"
       />
     </div>
     <button @click="login" class="btn-sign-in pr">
-      <div>登录</div>
+      <div>Sign In</div>
+    </button>
+    <button @click="signUp" class="btn-sign-in pr">
+      <div>Sign Up</div>
     </button>
   </div>
 </template>
@@ -44,6 +47,9 @@ export default {
         console.log(e)
       }
       this.isLoading = false
+    },
+    signUp() {
+      this.$router.push({ name: 'SignUp' })
     },
   },
 }
