@@ -209,6 +209,14 @@
   dependencies:
     tslib "^1.11.1"
 
+"@aws-sdk/abort-controller@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/abort-controller/download/@aws-sdk/abort-controller-3.20.0.tgz#85332ddfc3919f303f21d05413ff574b05b7c56b"
+  integrity sha1-hTMt38ORnzA/IdBUE/9XSwW3xWs=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/abort-controller@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/abort-controller/download/@aws-sdk/abort-controller-3.6.1.tgz#75812875bbef6ad17e0e3a6d96aab9df636376f9"
@@ -231,6 +239,43 @@
   integrity sha1-YzYwJdzswvndR65cKC15wBsyfYI=
   dependencies:
     tslib "^1.8.0"
+
+"@aws-sdk/client-cognito-identity-provider@^3.21.0":
+  version "3.21.0"
+  resolved "https://registry.nlark.com/@aws-sdk/client-cognito-identity-provider/download/@aws-sdk/client-cognito-identity-provider-3.21.0.tgz#5caf3be16e134bd437f806c53f7cd307b7c389bb"
+  integrity sha1-XK874W4TS9Q3+AbFP3zTB7fDibs=
+  dependencies:
+    "@aws-crypto/sha256-browser" "^1.0.0"
+    "@aws-crypto/sha256-js" "^1.0.0"
+    "@aws-sdk/client-sts" "3.21.0"
+    "@aws-sdk/config-resolver" "3.20.0"
+    "@aws-sdk/credential-provider-node" "3.21.0"
+    "@aws-sdk/fetch-http-handler" "3.20.0"
+    "@aws-sdk/hash-node" "3.20.0"
+    "@aws-sdk/invalid-dependency" "3.20.0"
+    "@aws-sdk/middleware-content-length" "3.20.0"
+    "@aws-sdk/middleware-host-header" "3.20.0"
+    "@aws-sdk/middleware-logger" "3.20.0"
+    "@aws-sdk/middleware-retry" "3.20.0"
+    "@aws-sdk/middleware-serde" "3.20.0"
+    "@aws-sdk/middleware-signing" "3.20.0"
+    "@aws-sdk/middleware-stack" "3.20.0"
+    "@aws-sdk/middleware-user-agent" "3.20.0"
+    "@aws-sdk/node-config-provider" "3.20.0"
+    "@aws-sdk/node-http-handler" "3.21.0"
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/smithy-client" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    "@aws-sdk/url-parser" "3.20.0"
+    "@aws-sdk/util-base64-browser" "3.20.0"
+    "@aws-sdk/util-base64-node" "3.20.0"
+    "@aws-sdk/util-body-length-browser" "3.20.0"
+    "@aws-sdk/util-body-length-node" "3.20.0"
+    "@aws-sdk/util-user-agent-browser" "3.20.0"
+    "@aws-sdk/util-user-agent-node" "3.20.0"
+    "@aws-sdk/util-utf8-browser" "3.20.0"
+    "@aws-sdk/util-utf8-node" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/client-cognito-identity@3.6.1":
   version "3.6.1"
@@ -623,6 +668,79 @@
     fast-xml-parser "^3.16.0"
     tslib "^2.0.0"
 
+"@aws-sdk/client-sso@3.21.0":
+  version "3.21.0"
+  resolved "https://registry.nlark.com/@aws-sdk/client-sso/download/@aws-sdk/client-sso-3.21.0.tgz#22ad1355dc5c46ba5e71693bcb90e8510b56bf1d"
+  integrity sha1-Iq0TVdxcRrpecWk7y5DoUQtWvx0=
+  dependencies:
+    "@aws-crypto/sha256-browser" "^1.0.0"
+    "@aws-crypto/sha256-js" "^1.0.0"
+    "@aws-sdk/config-resolver" "3.20.0"
+    "@aws-sdk/fetch-http-handler" "3.20.0"
+    "@aws-sdk/hash-node" "3.20.0"
+    "@aws-sdk/invalid-dependency" "3.20.0"
+    "@aws-sdk/middleware-content-length" "3.20.0"
+    "@aws-sdk/middleware-host-header" "3.20.0"
+    "@aws-sdk/middleware-logger" "3.20.0"
+    "@aws-sdk/middleware-retry" "3.20.0"
+    "@aws-sdk/middleware-serde" "3.20.0"
+    "@aws-sdk/middleware-stack" "3.20.0"
+    "@aws-sdk/middleware-user-agent" "3.20.0"
+    "@aws-sdk/node-config-provider" "3.20.0"
+    "@aws-sdk/node-http-handler" "3.21.0"
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/smithy-client" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    "@aws-sdk/url-parser" "3.20.0"
+    "@aws-sdk/util-base64-browser" "3.20.0"
+    "@aws-sdk/util-base64-node" "3.20.0"
+    "@aws-sdk/util-body-length-browser" "3.20.0"
+    "@aws-sdk/util-body-length-node" "3.20.0"
+    "@aws-sdk/util-user-agent-browser" "3.20.0"
+    "@aws-sdk/util-user-agent-node" "3.20.0"
+    "@aws-sdk/util-utf8-browser" "3.20.0"
+    "@aws-sdk/util-utf8-node" "3.20.0"
+    tslib "^2.0.0"
+
+"@aws-sdk/client-sts@3.21.0":
+  version "3.21.0"
+  resolved "https://registry.nlark.com/@aws-sdk/client-sts/download/@aws-sdk/client-sts-3.21.0.tgz#add20a9371fe102a2851112fc72b90aaa5566653"
+  integrity sha1-rdIKk3H+ECooUREvxyuQqqVWZlM=
+  dependencies:
+    "@aws-crypto/sha256-browser" "^1.0.0"
+    "@aws-crypto/sha256-js" "^1.0.0"
+    "@aws-sdk/config-resolver" "3.20.0"
+    "@aws-sdk/credential-provider-node" "3.21.0"
+    "@aws-sdk/fetch-http-handler" "3.20.0"
+    "@aws-sdk/hash-node" "3.20.0"
+    "@aws-sdk/invalid-dependency" "3.20.0"
+    "@aws-sdk/middleware-content-length" "3.20.0"
+    "@aws-sdk/middleware-host-header" "3.20.0"
+    "@aws-sdk/middleware-logger" "3.20.0"
+    "@aws-sdk/middleware-retry" "3.20.0"
+    "@aws-sdk/middleware-sdk-sts" "3.20.0"
+    "@aws-sdk/middleware-serde" "3.20.0"
+    "@aws-sdk/middleware-signing" "3.20.0"
+    "@aws-sdk/middleware-stack" "3.20.0"
+    "@aws-sdk/middleware-user-agent" "3.20.0"
+    "@aws-sdk/node-config-provider" "3.20.0"
+    "@aws-sdk/node-http-handler" "3.21.0"
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/smithy-client" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    "@aws-sdk/url-parser" "3.20.0"
+    "@aws-sdk/util-base64-browser" "3.20.0"
+    "@aws-sdk/util-base64-node" "3.20.0"
+    "@aws-sdk/util-body-length-browser" "3.20.0"
+    "@aws-sdk/util-body-length-node" "3.20.0"
+    "@aws-sdk/util-user-agent-browser" "3.20.0"
+    "@aws-sdk/util-user-agent-node" "3.20.0"
+    "@aws-sdk/util-utf8-browser" "3.20.0"
+    "@aws-sdk/util-utf8-node" "3.20.0"
+    entities "2.2.0"
+    fast-xml-parser "3.19.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/client-textract@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/client-textract/download/@aws-sdk/client-textract-3.6.1.tgz#b8972f53f0353222b4c052adc784291e602be6aa"
@@ -698,6 +816,15 @@
     tslib "^2.0.0"
     uuid "^3.0.0"
 
+"@aws-sdk/config-resolver@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/config-resolver/download/@aws-sdk/config-resolver-3.20.0.tgz#ad9852be9d9af8c96f312b69bdac8a82eba971ba"
+  integrity sha1-rZhSvp2a+MlvMStpvayKguupcbo=
+  dependencies:
+    "@aws-sdk/signature-v4" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/config-resolver@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/config-resolver/download/@aws-sdk/config-resolver-3.6.1.tgz#3bcc5e6a0ebeedf0981b0540e1f18a72b4dafebf"
@@ -717,6 +844,15 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/credential-provider-env@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/credential-provider-env/download/@aws-sdk/credential-provider-env-3.20.0.tgz#1bb71dabf28ddccd4b839155a645064346dde447"
+  integrity sha1-G7cdq/KN3M1Lg5FVpkUGQ0bd5Ec=
+  dependencies:
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/credential-provider-env@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/credential-provider-env/download/@aws-sdk/credential-provider-env-3.6.1.tgz#d8b2dd36836432a9b8ec05a5cf9fe428b04c9964"
@@ -725,6 +861,15 @@
     "@aws-sdk/property-provider" "3.6.1"
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/credential-provider-imds@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/credential-provider-imds/download/@aws-sdk/credential-provider-imds-3.20.0.tgz#2aca3a112904cb12dd30409773dd1d4b0bba5b5e"
+  integrity sha1-Kso6ESkEyxLdMECXc90dSwu6W14=
+  dependencies:
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/credential-provider-imds@3.6.1":
   version "3.6.1"
@@ -735,6 +880,19 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/credential-provider-ini@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/credential-provider-ini/download/@aws-sdk/credential-provider-ini-3.20.0.tgz#20cc34cc08dbeb5c16dbda0e8a3f310a3a4bd880"
+  integrity sha1-IMw0zAjb61wW29oOij8xCjpL2IA=
+  dependencies:
+    "@aws-sdk/credential-provider-env" "3.20.0"
+    "@aws-sdk/credential-provider-imds" "3.20.0"
+    "@aws-sdk/credential-provider-web-identity" "3.20.0"
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/shared-ini-file-loader" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/credential-provider-ini@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/credential-provider-ini/download/@aws-sdk/credential-provider-ini-3.6.1.tgz#0da6d9341e621f8e0815814ed017b88e268fbc3d"
@@ -744,6 +902,22 @@
     "@aws-sdk/shared-ini-file-loader" "3.6.1"
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/credential-provider-node@3.21.0":
+  version "3.21.0"
+  resolved "https://registry.nlark.com/@aws-sdk/credential-provider-node/download/@aws-sdk/credential-provider-node-3.21.0.tgz#b88dd7a1de55df3eb705ca44e3785b71aafce62f"
+  integrity sha1-uI3Xod5V3z63BcpE43hbcar85i8=
+  dependencies:
+    "@aws-sdk/credential-provider-env" "3.20.0"
+    "@aws-sdk/credential-provider-imds" "3.20.0"
+    "@aws-sdk/credential-provider-ini" "3.20.0"
+    "@aws-sdk/credential-provider-process" "3.20.0"
+    "@aws-sdk/credential-provider-sso" "3.21.0"
+    "@aws-sdk/credential-provider-web-identity" "3.20.0"
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/shared-ini-file-loader" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/credential-provider-node@3.6.1":
   version "3.6.1"
@@ -759,6 +933,17 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/credential-provider-process@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/credential-provider-process/download/@aws-sdk/credential-provider-process-3.20.0.tgz#5859ba4397e4c19c48579f19b606cb13cb22254e"
+  integrity sha1-WFm6Q5fkwZxIV58ZtgbLE8siJU4=
+  dependencies:
+    "@aws-sdk/credential-provider-ini" "3.20.0"
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/shared-ini-file-loader" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/credential-provider-process@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/credential-provider-process/download/@aws-sdk/credential-provider-process-3.6.1.tgz#5bf851f3ee232c565b8c82608926df0ad28c1958"
@@ -769,6 +954,27 @@
     "@aws-sdk/shared-ini-file-loader" "3.6.1"
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/credential-provider-sso@3.21.0":
+  version "3.21.0"
+  resolved "https://registry.nlark.com/@aws-sdk/credential-provider-sso/download/@aws-sdk/credential-provider-sso-3.21.0.tgz#0e0f97b5656ec94a6fd9f1ff046f9e285448aa62"
+  integrity sha1-Dg+XtWVuyUpv2fH/BG+eKFRIqmI=
+  dependencies:
+    "@aws-sdk/client-sso" "3.21.0"
+    "@aws-sdk/credential-provider-ini" "3.20.0"
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/shared-ini-file-loader" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
+"@aws-sdk/credential-provider-web-identity@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/credential-provider-web-identity/download/@aws-sdk/credential-provider-web-identity-3.20.0.tgz#8910fbeed5137cd0782f226ca1b724f3b903b93c"
+  integrity sha1-iRD77tUTfNB4LyJsobck87kDuTw=
+  dependencies:
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/eventstream-marshaller@3.6.1":
   version "3.6.1"
@@ -817,6 +1023,17 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/fetch-http-handler@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/fetch-http-handler/download/@aws-sdk/fetch-http-handler-3.20.0.tgz#af3d82c90f0135c21e471c823336027f20041bf1"
+  integrity sha1-rz2CyQ8BNcIeRxyCMzYCfyAEG/E=
+  dependencies:
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/querystring-builder" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    "@aws-sdk/util-base64-browser" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/fetch-http-handler@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/fetch-http-handler/download/@aws-sdk/fetch-http-handler-3.6.1.tgz#c5fb4a4ee158161fca52b220d2c11dddcda9b092"
@@ -838,6 +1055,15 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/hash-node@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/hash-node/download/@aws-sdk/hash-node-3.20.0.tgz#6fef5300412a440cab40276e36faadc1f3610478"
+  integrity sha1-b+9TAEEqRAyrQCduNvqtwfNhBHg=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    "@aws-sdk/util-buffer-from" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/hash-node@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/hash-node/download/@aws-sdk/hash-node-3.6.1.tgz#72d75ec3b9c7e7f9b0c498805364f1f897165ce9"
@@ -855,6 +1081,14 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/invalid-dependency@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/invalid-dependency/download/@aws-sdk/invalid-dependency-3.20.0.tgz#b336e7163b2e02f98a5e4038af82c2aea61ca963"
+  integrity sha1-szbnFjsuAvmKXkA4r4LCrqYcqWM=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/invalid-dependency@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/invalid-dependency/download/@aws-sdk/invalid-dependency-3.6.1.tgz#fd2519f5482c6d6113d38a73b7143fd8d5b5b670"
@@ -862,6 +1096,13 @@
   dependencies:
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/is-array-buffer@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/is-array-buffer/download/@aws-sdk/is-array-buffer-3.20.0.tgz#6ccdb96027fc1ab4a6f46145f3b7e8dbcca0a1b2"
+  integrity sha1-bM25YCf8GrSm9GFF87fo28ygobI=
+  dependencies:
+    tslib "^2.0.0"
 
 "@aws-sdk/is-array-buffer@3.6.1":
   version "3.6.1"
@@ -899,6 +1140,15 @@
     "@aws-sdk/util-arn-parser" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/middleware-content-length@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/middleware-content-length/download/@aws-sdk/middleware-content-length-3.20.0.tgz#b54ffb54d6c5a18be90d32d20dbd4f2fe9b530b2"
+  integrity sha1-tU/7VNbFoYvpDTLSDb1PL+m1MLI=
+  dependencies:
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/middleware-content-length@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/middleware-content-length/download/@aws-sdk/middleware-content-length-3.6.1.tgz#f9c00a4045b2b56c1ff8bcbb3dec9c3d42332992"
@@ -927,6 +1177,15 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/middleware-host-header@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/middleware-host-header/download/@aws-sdk/middleware-host-header-3.20.0.tgz#fe50d3dde559c0c1c01e7fdd747980eda41b0839"
+  integrity sha1-/lDT3eVZwMHAHn/ddHmA7aQbCDk=
+  dependencies:
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/middleware-host-header@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/middleware-host-header/download/@aws-sdk/middleware-host-header-3.6.1.tgz#6e1b4b95c5bfea5a4416fa32f11d8fa2e6edaeff"
@@ -944,6 +1203,14 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/middleware-logger@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/middleware-logger/download/@aws-sdk/middleware-logger-3.20.0.tgz#88fd7ae5877db7042e9a393ae037116e5fd96ad0"
+  integrity sha1-iP165Yd9twQumjk64DcRbl/ZatA=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/middleware-logger@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/middleware-logger/download/@aws-sdk/middleware-logger-3.6.1.tgz#78b3732cf188d5e4df13488db6418f7f98a77d6d"
@@ -951,6 +1218,17 @@
   dependencies:
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/middleware-retry@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/middleware-retry/download/@aws-sdk/middleware-retry-3.20.0.tgz#8aafa77f2765d876bbdb4a93b25b4a5e81a58cc6"
+  integrity sha1-iq+nfydl2Ha720qTsltKXoGljMY=
+  dependencies:
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/service-error-classification" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+    uuid "^8.3.2"
 
 "@aws-sdk/middleware-retry@3.6.1":
   version "3.6.1"
@@ -974,6 +1252,26 @@
     "@aws-sdk/util-arn-parser" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/middleware-sdk-sts@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/middleware-sdk-sts/download/@aws-sdk/middleware-sdk-sts-3.20.0.tgz#8e356d5b2dab9b72a2a444412d59b72d78e4305a"
+  integrity sha1-jjVtWy2rm3KipERBLVm3LXjkMFo=
+  dependencies:
+    "@aws-sdk/middleware-signing" "3.20.0"
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/signature-v4" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
+"@aws-sdk/middleware-serde@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/middleware-serde/download/@aws-sdk/middleware-serde-3.20.0.tgz#9282b90cd6f41b03287268b619e883290a610225"
+  integrity sha1-koK5DNb0GwMocmi2GeiDKQphAiU=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/middleware-serde@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/middleware-serde/download/@aws-sdk/middleware-serde-3.6.1.tgz#734c7d16c2aa9ccc01f6cca5e2f6aa2993b6739d"
@@ -981,6 +1279,17 @@
   dependencies:
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/middleware-signing@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/middleware-signing/download/@aws-sdk/middleware-signing-3.20.0.tgz#6282396f6e76ac7414d54425c96991a7107ef8de"
+  integrity sha1-YoI5b252rHQU1UQlyWmRpxB++N4=
+  dependencies:
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/signature-v4" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/middleware-signing@3.6.1":
   version "3.6.1"
@@ -1000,12 +1309,28 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/middleware-stack@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/middleware-stack/download/@aws-sdk/middleware-stack-3.20.0.tgz#572ea7c95584416052c75edb796e558a3bdf9f8d"
+  integrity sha1-Vy6nyVWEQWBSx17beW5Vijvfn40=
+  dependencies:
+    tslib "^2.0.0"
+
 "@aws-sdk/middleware-stack@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/middleware-stack/download/@aws-sdk/middleware-stack-3.6.1.tgz#d7483201706bb5935a62884e9b60f425f1c6434f"
   integrity sha1-10gyAXBrtZNaYohOm2D0JfHGQ08=
   dependencies:
     tslib "^1.8.0"
+
+"@aws-sdk/middleware-user-agent@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/middleware-user-agent/download/@aws-sdk/middleware-user-agent-3.20.0.tgz#219ef3a2448504832cf21c0841a6a482e33e1558"
+  integrity sha1-IZ7zokSFBIMs8hwIQaakguM+FVg=
+  dependencies:
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/middleware-user-agent@3.6.1":
   version "3.6.1"
@@ -1016,6 +1341,16 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/node-config-provider@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/node-config-provider/download/@aws-sdk/node-config-provider-3.20.0.tgz#e8aec16e2a262fd027f472989ad5badfe6404c02"
+  integrity sha1-6K7BbiomL9An9HKYmtW63+ZATAI=
+  dependencies:
+    "@aws-sdk/property-provider" "3.20.0"
+    "@aws-sdk/shared-ini-file-loader" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/node-config-provider@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/node-config-provider/download/@aws-sdk/node-config-provider-3.6.1.tgz#cb85d06329347fde566f08426f8714b1f65d2fb7"
@@ -1025,6 +1360,17 @@
     "@aws-sdk/shared-ini-file-loader" "3.6.1"
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/node-http-handler@3.21.0":
+  version "3.21.0"
+  resolved "https://registry.nlark.com/@aws-sdk/node-http-handler/download/@aws-sdk/node-http-handler-3.21.0.tgz#c1467e3ed6770d9ea9968ec6c019203f7a89ab06"
+  integrity sha1-wUZ+PtZ3DZ6plo7GwBkgP3qJqwY=
+  dependencies:
+    "@aws-sdk/abort-controller" "3.20.0"
+    "@aws-sdk/protocol-http" "3.20.0"
+    "@aws-sdk/querystring-builder" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/node-http-handler@3.6.1":
   version "3.6.1"
@@ -1037,6 +1383,14 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/property-provider@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/property-provider/download/@aws-sdk/property-provider-3.20.0.tgz#92cc4edabc4c414727ccc620ef37fc00ab19bff8"
+  integrity sha1-ksxO2rxMQUcnzMYg7zf8AKsZv/g=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/property-provider@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/property-provider/download/@aws-sdk/property-provider-3.6.1.tgz#d973fc87d199d32c44d947e17f2ee2dd140a9593"
@@ -1044,6 +1398,14 @@
   dependencies:
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/protocol-http@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/protocol-http/download/@aws-sdk/protocol-http-3.20.0.tgz#1e7877d220ccfad0766e294ae5bab43b371ee503"
+  integrity sha1-Hnh30iDM+tB2bilK5bq0Ozce5QM=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/protocol-http@3.6.1":
   version "3.6.1"
@@ -1053,6 +1415,15 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/querystring-builder@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/querystring-builder/download/@aws-sdk/querystring-builder-3.20.0.tgz#ec02c4a831c0fbeb2de6e228fe329f5d2a4502e9"
+  integrity sha1-7ALEqDHA++st5uIo/jKfXSpFAuk=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    "@aws-sdk/util-uri-escape" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/querystring-builder@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/querystring-builder/download/@aws-sdk/querystring-builder-3.6.1.tgz#4c769829a3760ef065d0d3801f297a7f0cd324d4"
@@ -1061,6 +1432,14 @@
     "@aws-sdk/types" "3.6.1"
     "@aws-sdk/util-uri-escape" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/querystring-parser@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/querystring-parser/download/@aws-sdk/querystring-parser-3.20.0.tgz#f53efe53618f55224945cdb5c6623c8b27b1866a"
+  integrity sha1-9T7+U2GPVSJJRc21xmI8iyexhmo=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/querystring-parser@3.6.1":
   version "3.6.1"
@@ -1083,10 +1462,22 @@
     "@aws-sdk/util-format-url" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/service-error-classification@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/service-error-classification/download/@aws-sdk/service-error-classification-3.20.0.tgz#3b70173b414de1e8c19d66fdf0c7ead75fcd6d7f"
+  integrity sha1-O3AXO0FN4ejBnWb98Mfq11/NbX8=
+
 "@aws-sdk/service-error-classification@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/service-error-classification/download/@aws-sdk/service-error-classification-3.6.1.tgz#296fe62ac61338341e8a009c9a2dab013a791903"
   integrity sha1-KW/mKsYTODQeigCcmi2rATp5GQM=
+
+"@aws-sdk/shared-ini-file-loader@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/shared-ini-file-loader/download/@aws-sdk/shared-ini-file-loader-3.20.0.tgz#fa9692aad4e7c140babb1fc39ab4ec17474993b9"
+  integrity sha1-+paSqtTnwUC6ux/DmrTsF0dJk7k=
+  dependencies:
+    tslib "^2.0.0"
 
 "@aws-sdk/shared-ini-file-loader@3.6.1":
   version "3.6.1"
@@ -1094,6 +1485,17 @@
   integrity sha1-K3GCy7DWMq18lxK+v/3u4kpvfrY=
   dependencies:
     tslib "^1.8.0"
+
+"@aws-sdk/signature-v4@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/signature-v4/download/@aws-sdk/signature-v4-3.20.0.tgz#c55379216471cf1350c03e6d8130c0ac90170cbe"
+  integrity sha1-xVN5IWRxzxNQwD5tgTDArJAXDL4=
+  dependencies:
+    "@aws-sdk/is-array-buffer" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    "@aws-sdk/util-hex-encoding" "3.20.0"
+    "@aws-sdk/util-uri-escape" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/signature-v4@3.6.1":
   version "3.6.1"
@@ -1106,6 +1508,15 @@
     "@aws-sdk/util-uri-escape" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/smithy-client@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/smithy-client/download/@aws-sdk/smithy-client-3.20.0.tgz#ca024d5b316701af51ababbcdc898dc64227566d"
+  integrity sha1-ygJNWzFnAa9Rq6u83ImNxkInVm0=
+  dependencies:
+    "@aws-sdk/middleware-stack" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/smithy-client@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/smithy-client/download/@aws-sdk/smithy-client-3.6.1.tgz#683fef89802e318922f8529a5433592d71a7ce9d"
@@ -1114,6 +1525,11 @@
     "@aws-sdk/middleware-stack" "3.6.1"
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/types@3.20.0", "@aws-sdk/types@^3.1.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/types/download/@aws-sdk/types-3.20.0.tgz#f14a13970ffc9096ec28fb60c5b40b5ddaaecea9"
+  integrity sha1-8UoTlw/8kJbsKPtgxbQLXdquzqk=
 
 "@aws-sdk/types@3.6.1":
   version "3.6.1"
@@ -1125,11 +1541,6 @@
   resolved "https://registry.nlark.com/@aws-sdk/types/download/@aws-sdk/types-1.0.0-rc.10.tgz#729127fbfac5da1a3368ffe6ec2e90acc9ad69c3"
   integrity sha1-cpEn+/rF2hozaP/m7C6QrMmtacM=
 
-"@aws-sdk/types@^3.1.0":
-  version "3.20.0"
-  resolved "https://registry.nlark.com/@aws-sdk/types/download/@aws-sdk/types-3.20.0.tgz#f14a13970ffc9096ec28fb60c5b40b5ddaaecea9"
-  integrity sha1-8UoTlw/8kJbsKPtgxbQLXdquzqk=
-
 "@aws-sdk/url-parser-native@3.6.1":
   version "3.6.1"
   resolved "https://registry.npm.taobao.org/@aws-sdk/url-parser-native/download/@aws-sdk/url-parser-native-3.6.1.tgz#a5e787f98aafa777e73007f9490df334ef3389a2"
@@ -1139,6 +1550,15 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
     url "^0.11.0"
+
+"@aws-sdk/url-parser@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/url-parser/download/@aws-sdk/url-parser-3.20.0.tgz#b1447cd919a2d84e772e651234096da152169a3c"
+  integrity sha1-sUR82Rmi2E53LmUSNAltoVIWmjw=
+  dependencies:
+    "@aws-sdk/querystring-parser" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/url-parser@3.6.1":
   version "3.6.1"
@@ -1156,12 +1576,27 @@
   dependencies:
     tslib "^1.8.0"
 
+"@aws-sdk/util-base64-browser@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-base64-browser/download/@aws-sdk/util-base64-browser-3.20.0.tgz#0ed9b767e53da736eb01845ef2121f3a6f7c6175"
+  integrity sha1-Dtm3Z+U9pzbrAYRe8hIfOm98YXU=
+  dependencies:
+    tslib "^2.0.0"
+
 "@aws-sdk/util-base64-browser@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/util-base64-browser/download/@aws-sdk/util-base64-browser-3.6.1.tgz#eddea1311b41037fc3fddd889d3e0a9882363215"
   integrity sha1-7d6hMRtBA3/D/d2InT4KmII2MhU=
   dependencies:
     tslib "^1.8.0"
+
+"@aws-sdk/util-base64-node@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-base64-node/download/@aws-sdk/util-base64-node-3.20.0.tgz#b728432b6c45daa11de17db68a7a18422e337c90"
+  integrity sha1-tyhDK2xF2qEd4X22inoYQi4zfJA=
+  dependencies:
+    "@aws-sdk/util-buffer-from" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/util-base64-node@3.6.1":
   version "3.6.1"
@@ -1171,6 +1606,13 @@
     "@aws-sdk/util-buffer-from" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/util-body-length-browser@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-body-length-browser/download/@aws-sdk/util-body-length-browser-3.20.0.tgz#9035ac78ce67286af5b06aaa0d06c156d6a3ce9e"
+  integrity sha1-kDWseM5nKGr1sGqqDQbBVtajzp4=
+  dependencies:
+    tslib "^2.0.0"
+
 "@aws-sdk/util-body-length-browser@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/util-body-length-browser/download/@aws-sdk/util-body-length-browser-3.6.1.tgz#2e8088f2d9a5a8258b4f56079a8890f538c2797e"
@@ -1178,12 +1620,27 @@
   dependencies:
     tslib "^1.8.0"
 
+"@aws-sdk/util-body-length-node@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-body-length-node/download/@aws-sdk/util-body-length-node-3.20.0.tgz#0f72539f9cf58eba1e0444fca2e9cdb61bb506da"
+  integrity sha1-D3JTn5z1jroeBET8ounNthu1Bto=
+  dependencies:
+    tslib "^2.0.0"
+
 "@aws-sdk/util-body-length-node@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/util-body-length-node/download/@aws-sdk/util-body-length-node-3.6.1.tgz#6e4f2eae46c5a7b0417a12ca7f4b54c390d4cacd"
   integrity sha1-bk8urkbFp7BBehLKf0tUw5DUys0=
   dependencies:
     tslib "^1.8.0"
+
+"@aws-sdk/util-buffer-from@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-buffer-from/download/@aws-sdk/util-buffer-from-3.20.0.tgz#65287a96cc9bf765763b77ff0d6629e4658dbd8d"
+  integrity sha1-ZSh6lsyb92V2O3f/DWYp5GWNvY0=
+  dependencies:
+    "@aws-sdk/is-array-buffer" "3.20.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/util-buffer-from@3.6.1":
   version "3.6.1"
@@ -1212,6 +1669,13 @@
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
 
+"@aws-sdk/util-hex-encoding@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-hex-encoding/download/@aws-sdk/util-hex-encoding-3.20.0.tgz#ca3b77a58117365ce9bd317ce0fd62fde53fedab"
+  integrity sha1-yjt3pYEXNlzpvTF84P1i/eU/7as=
+  dependencies:
+    tslib "^2.0.0"
+
 "@aws-sdk/util-hex-encoding@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/util-hex-encoding/download/@aws-sdk/util-hex-encoding-3.6.1.tgz#84954fcc47b74ffbd2911ba5113e93bd9b1c6510"
@@ -1226,12 +1690,28 @@
   dependencies:
     tslib "^2.0.0"
 
+"@aws-sdk/util-uri-escape@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-uri-escape/download/@aws-sdk/util-uri-escape-3.20.0.tgz#1f0844dfd0ce9ed2e6348318b2f5d88da7d171f2"
+  integrity sha1-HwhE39DOntLmNIMYsvXYjafRcfI=
+  dependencies:
+    tslib "^2.0.0"
+
 "@aws-sdk/util-uri-escape@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/util-uri-escape/download/@aws-sdk/util-uri-escape-3.6.1.tgz#433e87458bb510d0e457a86c0acf12b046a5068c"
   integrity sha1-Qz6HRYu1ENDkV6hsCs8SsEalBow=
   dependencies:
     tslib "^1.8.0"
+
+"@aws-sdk/util-user-agent-browser@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-user-agent-browser/download/@aws-sdk/util-user-agent-browser-3.20.0.tgz#1ef7c40eccbd48b8ccf43cf4df9a43498ffaf069"
+  integrity sha1-HvfEDsy9SLjM9Dz035pDSY/68Gk=
+  dependencies:
+    "@aws-sdk/types" "3.20.0"
+    bowser "^2.11.0"
+    tslib "^2.0.0"
 
 "@aws-sdk/util-user-agent-browser@3.6.1":
   version "3.6.1"
@@ -1242,6 +1722,15 @@
     bowser "^2.11.0"
     tslib "^1.8.0"
 
+"@aws-sdk/util-user-agent-node@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-user-agent-node/download/@aws-sdk/util-user-agent-node-3.20.0.tgz#66f9fc913960390270bd4a6cd090c7de172bc8bc"
+  integrity sha1-Zvn8kTlgOQJwvUps0JDH3hcryLw=
+  dependencies:
+    "@aws-sdk/node-config-provider" "3.20.0"
+    "@aws-sdk/types" "3.20.0"
+    tslib "^2.0.0"
+
 "@aws-sdk/util-user-agent-node@3.6.1":
   version "3.6.1"
   resolved "https://registry.nlark.com/@aws-sdk/util-user-agent-node/download/@aws-sdk/util-user-agent-node-3.6.1.tgz#98384095fa67d098ae7dd26f3ccaad028e8aebb6"
@@ -1250,6 +1739,13 @@
     "@aws-sdk/node-config-provider" "3.6.1"
     "@aws-sdk/types" "3.6.1"
     tslib "^1.8.0"
+
+"@aws-sdk/util-utf8-browser@3.20.0", "@aws-sdk/util-utf8-browser@^3.0.0":
+  version "3.20.0"
+  resolved "https://registry.nlark.com/@aws-sdk/util-utf8-browser/download/@aws-sdk/util-utf8-browser-3.20.0.tgz#e82da4ef361e091834e61508d9a5829e9dcd5d87"
+  integrity sha1-6C2k7zYeCRg05hUI2aWCnp3NXYc=
+  dependencies:
+    tslib "^2.0.0"
 
 "@aws-sdk/util-utf8-browser@3.6.1":
   version "3.6.1"
@@ -1265,11 +1761,12 @@
   dependencies:
     tslib "^1.8.0"
 
-"@aws-sdk/util-utf8-browser@^3.0.0":
+"@aws-sdk/util-utf8-node@3.20.0":
   version "3.20.0"
-  resolved "https://registry.nlark.com/@aws-sdk/util-utf8-browser/download/@aws-sdk/util-utf8-browser-3.20.0.tgz#e82da4ef361e091834e61508d9a5829e9dcd5d87"
-  integrity sha1-6C2k7zYeCRg05hUI2aWCnp3NXYc=
+  resolved "https://registry.nlark.com/@aws-sdk/util-utf8-node/download/@aws-sdk/util-utf8-node-3.20.0.tgz#0fba231f047851707fadcd63ffee218e98c2bf9e"
+  integrity sha1-D7ojHwR4UXB/rc1j/+4hjpjCv54=
   dependencies:
+    "@aws-sdk/util-buffer-from" "3.20.0"
     tslib "^2.0.0"
 
 "@aws-sdk/util-utf8-node@3.6.1":
@@ -4832,7 +5329,7 @@ enhanced-resolve@^4.5.0:
     memory-fs "^0.5.0"
     tapable "^1.0.0"
 
-entities@^2.0.0:
+entities@2.2.0, entities@^2.0.0:
   version "2.2.0"
   resolved "https://registry.nlark.com/entities/download/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
   integrity sha1-CY3JDruD2N/6CJ1VJWs1HTTE2lU=
@@ -5268,7 +5765,7 @@ fast-levenshtein@~2.0.6:
   resolved "https://registry.nlark.com/fast-levenshtein/download/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fast-xml-parser@^3.16.0:
+fast-xml-parser@3.19.0, fast-xml-parser@^3.16.0:
   version "3.19.0"
   resolved "https://registry.npm.taobao.org/fast-xml-parser/download/fast-xml-parser-3.19.0.tgz#cb637ec3f3999f51406dd8ff0e6fc4d83e520d01"
   integrity sha1-y2N+w/OZn1FAbdj/Dm/E2D5SDQE=
@@ -10074,6 +10571,11 @@ uuid@^3.0.0, uuid@^3.2.1, uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.nlark.com/uuid/download/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4=
+
+uuid@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.nlark.com/uuid/download/uuid-8.3.2.tgz?cache=0&sync_timestamp=1622213399220&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fuuid%2Fdownload%2Fuuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha1-gNW1ztJxu5r2xEXyGhoExgbO++I=
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"
