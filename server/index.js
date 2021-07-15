@@ -21,11 +21,17 @@ const server = http.createServer(async (req, res) => {
   }
   const bodyStr = await getReqBody(req)
   const body = JSON.parse(bodyStr)
-  body.SecretHash = getSecretHash(body.Username, body.ClientId)
+  // body.SecretHash = getSecretHash(body.Username, body.ClientId)
   const provider = new CognitoIdentityProvider({ region: region })
-  const data = await provider.signUp(body)
-  console.log(data)
-  res.end('ok')
+  try {
+    const data = await provider.signUp(body)
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify(data))
+  } catch (e) {
+    console.log('error. ')
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify(e))
+  }
 })
 
 server.listen(3000)

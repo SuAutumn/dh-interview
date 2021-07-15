@@ -6,6 +6,7 @@
 
 <script>
 import api from '@/apis/index.js'
+// import { Auth } from 'aws-amplify'
 export default {
   name: 'SignUp',
   data() {
@@ -20,6 +21,7 @@ export default {
       this.password = '123456zp'
       try {
         // const hash = 'vw+5MePc3ibKJHr+eG3oIgvg2Hg3CmUUiKBIDLQmLtw='
+        // Auth.federatedSignIn()
         const user = await api.signUp(this.username, this.password)
         console.log(user)
       } catch (e) {

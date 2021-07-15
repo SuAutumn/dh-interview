@@ -11,7 +11,7 @@ export default {
 
   signUp(username, password) {
     Auth.configure({
-      endpoint: 'http://localhost:3000',
+      // endpoint: 'http://localhost:3000',
     })
     return Auth.signUp({
       username,
