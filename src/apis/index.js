@@ -10,9 +10,15 @@ export default {
   },
 
   signUp(username, password) {
+    Auth.configure({
+      // endpoint: 'http://localhost:3000',
+    })
     return Auth.signUp({
       username,
       password,
+      attributes: {
+        email: username,
+      },
     })
   },
 }

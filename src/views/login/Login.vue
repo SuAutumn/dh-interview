@@ -30,7 +30,7 @@ export default {
     async login () {
       if (this.isLoading) return
       this.isLoading = true
-      this.username = 'zhangp'
+      this.username = '909153789@qq.com'
       this.password = '123456'
       try {
         const user = await Auth.signIn(this.username, this.password)
