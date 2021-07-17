@@ -1,32 +1,25 @@
 <template>
-  <div class="login flex-col flex-h-center">
-    <div class="input">
-      <input
-        type="text"
-        v-model="username"
-        placeholder="Phone number or email"
-        class="username"
-      />
-      <input
-        type="text"
-        v-model="password"
-        placeholder="Password"
-        class="password"
-      />
-    </div>
-    <button @click="login" class="btn-sign-in pr">
-      <div>Sign In</div>
-    </button>
-    <button @click="signUp" class="btn-sign-in pr">
-      <div>Sign Up</div>
-    </button>
+  <div class="login p-16">
+    <h1 class="mb-30">Welcome to Interview</h1>
+    <form>
+      <div class="mb-3">
+        <label for="input-username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="input-username">
+      </div>
+      <div class="mb-3">
+        <label for="input-password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="input-password">
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
   </div>
 </template>
 <script>
 import { Auth } from 'aws-amplify'
+
 export default {
   name: 'Login',
-  data() {
+  data () {
     return {
       username: '',
       password: '',
@@ -34,7 +27,7 @@ export default {
     }
   },
   methods: {
-    async login() {
+    async login () {
       if (this.isLoading) return
       this.isLoading = true
       this.username = 'zhangp'
@@ -48,45 +41,15 @@ export default {
       }
       this.isLoading = false
     },
-    signUp() {
+    signUp () {
       this.$router.push({ name: 'SignUp' })
     },
   },
 }
 </script>
 <style lang="scss" scoped>
-@import '@/assets/css/var.scss';
 .login {
-  font-size: $text_default_size;
-  height: 80vh;
-  .input {
-  }
-  .username,
-  .password {
-    display: block;
-    margin: 14px auto;
-    padding: $default_padding;
-    border: 1px solid $gray;
-    border-radius: $default_radius;
-    transition: border 0.3s;
-    height: 36px;
-    line-height: 36px;
-    width: 68%;
-    max-width: 200px;
-    &:focus {
-      border-color: $primary;
-    }
-  }
-  .btn-sign-in {
-    width: 68%;
-    max-width: 200px;
-    background-color: $primary;
-    color: $text_white;
-    border: 1px solid $primary;
-    border-radius: $default_radius;
-    height: 36px;
-    line-height: 36px;
-    margin: 20px auto;
-  }
+  max-width: $screen-sm;
+  margin: 0 auto;
 }
 </style>

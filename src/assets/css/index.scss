@@ -1,3 +1,5 @@
+@import "var";
+
 * {
   box-sizing: border-box;
 }
@@ -5,11 +7,13 @@
 .pr {
   position: relative;
 }
+
+$px1: (1/$default_font_size);
 // margin and padding setting
 @for $i from 1 through 30 {
   @if $i > 4 {
     .font-size-#{$i} {
-      font-size: 1px * $i;
+      font-size: $px1 * $i;
     }
   }
   .m-#{$i} {
@@ -60,6 +64,7 @@
     padding-bottom: 1px * $i;
   }
 }
+
 // grid setting
 @for $i from 1 through 12 {
   .col-#{$i} {
