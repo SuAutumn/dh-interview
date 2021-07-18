@@ -1,7 +1,10 @@
 import http from 'http'
 import url from 'url'
 import crypto from 'crypto'
-import { CognitoIdentityProvider } from '@aws-sdk/client-cognito-identity-provider'
+import clientCognitoIdentity from '@aws-sdk/client-cognito-identity-provider'
+
+const { CognitoIdentityProvider } = clientCognitoIdentity
+
 
 const server = http.createServer(async (req, res) => {
   let origin = '*'
@@ -12,25 +15,28 @@ const server = http.createServer(async (req, res) => {
   res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
   res.setHeader(
     'Access-Control-Allow-Headers',
-    'Content-Type, x-amz-target, x-amz-user-agent'
+    'Content-Type, x-amz-target, x-amz-user-agent',
   )
   if (req.method === 'OPTIONS') {
     res.writeHead(200, { 'Content-Type': 'text/plain' })
-    res.end('ok')
+    res.end()
     return
   }
   const bodyStr = await getReqBody(req)
   const body = JSON.parse(bodyStr)
-  // body.SecretHash = getSecretHash(body.Username, body.ClientId)
+  body.SecretHash = getSecretHash(body.Username, body.ClientId)
   const provider = new CognitoIdentityProvider({ region: region })
   try {
     const data = await provider.signUp(body)
-    res.writeHead(200, { 'Content-Type': 'application/json' })
+    console.log('data', data)
+    res.writeHead(200, { 'Content-Type': 'application/x-amz-json-1.1' })
     res.end(JSON.stringify(data))
   } catch (e) {
-    console.log('error. ')
-    res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify(e))
+    res.writeHead(e.$metadata.httpStatusCode, { 'Content-Type': 'application/x-amz-json-1.1' })
+    res.end(JSON.stringify({
+      name: e.name,
+      message: e.message,
+    }))
   }
 })
 
@@ -65,8 +71,10 @@ function getReqBody(req) {
   return p
 }
 
-const clientSecret = 'k896edqfibmfieqdj5vhk4rig2j68e014freoeuhfgo25k8clme'
+// const clientSecret = 'k896edqfibmfieqdj5vhk4rig2j68e014freoeuhfgo25k8clme'
+const clientSecret = '1b5imnq1o1ut4nqahbvdj5grokm4te7gf6251hbekppapvjaf8h7'
 const region = 'ap-southeast-2'
+
 function getSecretHash(username, clientId) {
   return crypto
     .createHmac('SHA256', clientSecret)
