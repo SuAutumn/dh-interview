@@ -8,6 +8,10 @@
   position: relative;
 }
 
+.ab {
+  position: absolute;
+}
+
 $px1: (1/$default_font_size);
 // margin and padding setting
 @for $i from 1 through 30 {

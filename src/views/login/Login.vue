@@ -1,17 +1,28 @@
 <template>
-  <div class="login p-16">
-    <h1 class="mb-30">Welcome to Interview</h1>
-    <form>
-      <div class="mb-3">
-        <label for="input-username" class="form-label">Username</label>
-        <input type="text" class="form-control" id="input-username">
+  <div class="login p-16 container">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <h1 class="pb-16">Welcome to Interview</h1>
       </div>
-      <div class="mb-3">
-        <label for="input-password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="input-password">
+      <div class="col-md-6 col-xs-12">
+        <form>
+          <div class="mb-3">
+            <label for="input-username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="input-username" v-model="username">
+          </div>
+          <div class="mb-3">
+            <label for="input-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="input-password" v-model="password">
+          </div>
+          <button type="submit" class="btn btn-primary col-12" @click="login">Sign In</button>
+          <div class="pr mv-16">
+            <div class="dropdown-divider"></div>
+            <div class="ab login_or">or</div>
+          </div>
+          <button type="submit" class="btn btn-outline-primary col-12" @click="signUp">Sign Out</button>
+        </form>
       </div>
-      <button type="submit" class="btn btn-primary">Sign In</button>
-    </form>
+    </div>
   </div>
 </template>
 <script>
@@ -19,7 +30,7 @@ import { Auth } from 'aws-amplify'
 
 export default {
   name: 'Login',
-  data () {
+  data() {
     return {
       username: '',
       password: '',
@@ -27,7 +38,7 @@ export default {
     }
   },
   methods: {
-    async login () {
+    async login() {
       if (this.isLoading) return
       this.isLoading = true
       this.username = '909153789@qq.com'
@@ -41,15 +52,26 @@ export default {
       }
       this.isLoading = false
     },
-    signUp () {
+    signUp() {
       this.$router.push({ name: 'SignUp' })
     },
   },
 }
 </script>
 <style lang="scss" scoped>
-.login {
-  max-width: $screen-sm;
-  margin: 0 auto;
-}
+  .login {
+    max-width: $screen-sm;
+    margin: 0 auto;
+
+    &_or {
+      top: -0.5rem;
+      left: 50%;
+      line-height: 1rem;
+      height: 1rem;
+      background-color: $white;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      transform: translateX(-50%);
+    }
+  }
 </style>
