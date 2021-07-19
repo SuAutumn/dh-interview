@@ -74,7 +74,7 @@ export default {
       username: '',
       password: '',
       // show the confirm UI flag
-      isShowConfirmUI: !false,
+      isShowConfirmUI: false,
       confirmCode: '',
     }
   },
