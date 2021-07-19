@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 // dims
 $default_padding: 8px;
 $default_margin: $default_padding;
@@ -11,9 +13,9 @@ $screen-md: 992px;
 $screen-lg: 1200px;
 
 // color
-$gray: #ccc;
-$white: #fff;
-$primary: #337ab7;
+$gray: $gray-500;
+$white: $white;
+$primary: $primary;
 
 // text color
 $text_white: $white;
@@ -24,6 +26,3 @@ $text_default_size: 14px;
 export {
   $default_font_size: $default_font_size
 }
-
-
-
