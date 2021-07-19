@@ -8,7 +8,7 @@ import App from './App.vue'
 import router from './router'
 import Amplify from 'aws-amplify'
 import amplifyConfig from '@/constant/amplify-config.json'
-import toast from '@/components/toast/toast.js'
+import toast from '@/components/widgets/toast/toast.js'
 
 Vue.config.productionTip = false
 
