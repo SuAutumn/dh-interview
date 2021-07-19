@@ -2,24 +2,50 @@
   <div class="login p-16 container">
     <div class="row">
       <div class="col-md-6 col-xs-12">
-        <h1 class="pb-16">Welcome to Interview</h1>
+        <h1 class="pb-16 fw-bold">Welcome to the Interview</h1>
       </div>
       <div class="col-md-6 col-xs-12">
         <form>
           <div class="mb-3">
             <label for="input-username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="input-username" v-model="username">
+            <input
+              type="text"
+              class="form-control"
+              id="input-username"
+              v-model="username"
+            />
           </div>
           <div class="mb-3">
             <label for="input-password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="input-password" v-model="password">
+            <input
+              type="password"
+              class="form-control"
+              id="input-password"
+              v-model="password"
+            />
           </div>
-          <button type="submit" class="btn btn-primary col-12" @click="login">Sign In</button>
-          <div class="pr mv-16">
-            <div class="dropdown-divider"></div>
-            <div class="ab login_or">or</div>
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault"
+              >Remember me</label
+            >
           </div>
-          <button type="submit" class="btn btn-outline-primary col-12" @click="signUp">Sign Out</button>
+          <button type="button" class="btn btn-primary col-12" @click="login">
+            Sign In
+          </button>
+          <divider>or</divider>
+          <button
+            type="button"
+            class="btn btn-outline-primary col-12"
+            @click="signUp"
+          >
+            Sign Up
+          </button>
         </form>
       </div>
     </div>
@@ -27,9 +53,11 @@
 </template>
 <script>
 import { Auth } from 'aws-amplify'
+import Divider from '@/components/widgets/divider/divider'
 
 export default {
   name: 'Login',
+  components: { Divider },
   data() {
     return {
       username: '',
@@ -59,19 +87,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .login {
-    max-width: $screen-sm;
-    margin: 0 auto;
-
-    &_or {
-      top: -0.5rem;
-      left: 50%;
-      line-height: 1rem;
-      height: 1rem;
-      background-color: $white;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      transform: translateX(-50%);
-    }
-  }
+.login {
+  max-width: $screen-sm;
+  margin: 0 auto;
+}
 </style>
