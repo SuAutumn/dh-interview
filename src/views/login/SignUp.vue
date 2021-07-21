@@ -100,7 +100,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .sign-up {
-  max-width: $screen-sm;
+  max-width: $screen_sm;
   margin: 0 auto;
 }
 </style>

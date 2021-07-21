@@ -88,7 +88,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .login {
-  max-width: $screen-sm;
+  max-width: $screen_sm;
   margin: 0 auto;
 }
 </style>
