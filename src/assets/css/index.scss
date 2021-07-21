@@ -12,12 +12,11 @@
   position: absolute;
 }
 
-$px1: (1/$default_font_size);
 // margin and padding setting
-@for $i from 1 through 30 {
-  @if $i > 4 {
+@for $i from 0 through 30 {
+  @if $i >= 12 {
     .font-size-#{$i} {
-      font-size: $px1 * $i;
+      font-size: 1px * $i;
     }
   }
   .m-#{$i} {
@@ -66,6 +65,14 @@ $px1: (1/$default_font_size);
   .pv-#{$i} {
     padding-top: 1px * $i;
     padding-bottom: 1px * $i;
+  }
+}
+
+@for $i from 0 through 30 {
+  @media screen and (max-width: $screen_sm) {
+    .ml-xs-#{$i} {
+      margin-left: 1px * $i;
+    }
   }
 }
 
@@ -143,6 +150,39 @@ $px1: (1/$default_font_size);
   }
 }
 
+.text-gray-500 {
+  color: $gray-500;
+}
+
+.text-gray-600 {
+  color: $gray-600;
+}
+
+.text-gray {
+  color: $gray;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
 .no-flex-shrink {
   flex-shrink: 0;
+}
+
+.border-bottom-1 {
+  border-bottom: 1px solid $gray-300;
+}
+
+.border-bottom-2 {
+  border-bottom: 2px solid $gray-300;
+}
+
+.border-bottom-3 {
+  border-bottom: 3px solid $gray-300;
 }

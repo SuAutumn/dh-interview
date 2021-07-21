@@ -1,38 +1,44 @@
 <template>
-  <div class="home p-8">
-    <div class="left-navs_items fs-5 lh-lg bg-white p-8">
-      <div
-        class="left-navs_item"
-        v-for="nav in navs"
-        :key="nav.name"
-        @click="routePage(nav)"
-      >
+  <div class="home p-8 container">
+    <div class="row flex flex-v-stretch">
+      <div class="left-navs_items fs-5 lh-lg bg-white p-8 col-xs-12">
         <div
-          class="flex flex-h-between left-navs_item_name"
-          :class="{ active: nav.selected }"
+          class="left-navs_item"
+          v-for="nav in navs"
+          :key="nav.name"
+          @click="routePage(nav)"
         >
-          {{ nav.name }}
-          <i
-            class="bi-chevron-down fs-6 bi"
-            v-if="nav.children"
-            :class="{ 'chevron-up': nav.open }"
-          ></i>
-        </div>
-        <collapse :open="nav.open" v-if="nav.children">
           <div
-            v-for="child in nav.children"
-            :key="child.name"
-            class="fs-6 pl-16"
-            @click.stop="routePage(child)"
+            class="flex flex-h-between left-navs_item_name"
+            :class="{ active: nav.selected }"
           >
-            <span :class="{ active: child.selected }">{{ child.name }}</span>
+            {{ nav.name }}
+            <i
+              class="bi-chevron-down fs-6 bi"
+              v-if="nav.children"
+              :class="{ 'chevron-up': nav.open }"
+            ></i>
           </div>
-        </collapse>
+          <collapse :open="nav.open" v-if="nav.children">
+            <div class="border-left ml-8">
+              <div
+                v-for="child in nav.children"
+                :key="child.name"
+                class="fs-6 pl-16"
+                @click.stop="routePage(child)"
+              >
+                <span :class="{ active: child.selected }">{{
+                  child.name
+                }}</span>
+              </div>
+            </div>
+          </collapse>
+        </div>
       </div>
-    </div>
-    <div class="left-navs_content ph-8 pv-16">
-      <navs-path></navs-path>
-      <router-view></router-view>
+      <div class="left-navs_content p-16 bg-white ml-8 col-xs-12 ml-xs-0">
+        <navs-path class="pb-8"></navs-path>
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +53,15 @@ export default {
   components: { NavsPath, Collapse },
   created() {
     this.navs = this.navsHandler(homeRouter)
+    if (this._currentNav) {
+      this.walkNavsFromBottomToTop(this._currentNav, (parent) => {
+        parent.selected = this._currentNav.selected
+        // eslint-disable-next-line no-prototype-builtins
+        if (parent.hasOwnProperty('open')) {
+          parent.open = this._currentNav?.selected
+        }
+      })
+    }
   },
   data() {
     this._currentNav = null
@@ -82,13 +97,9 @@ export default {
           navs.push(n)
         }
       })
-      if (this._currentNav) {
-        this.changeParentNavsSelected(this._currentNav)
-      }
       return navs
     },
     routePage(nav) {
-      debugger
       // eslint-disable-next-line no-prototype-builtins
       if (nav.hasOwnProperty('open')) {
         nav.open = !nav.open
@@ -97,18 +108,25 @@ export default {
       // eslint-disable-next-line no-prototype-builtins
       if (!nav.hasOwnProperty('children') && !nav.selected) {
         this._currentNav.selected = false
-        this.changeParentNavsSelected(this._currentNav)
+        this.walkNavsFromBottomToTop(
+          this._currentNav,
+          (parent) => (parent.selected = this._currentNav.selected)
+        )
         nav.selected = true
         this._currentNav = nav
-        this.changeParentNavsSelected(this._currentNav)
-        console.log(nav.path)
+        this.walkNavsFromBottomToTop(
+          this._currentNav,
+          (parent) => (parent.selected = this._currentNav.selected)
+        )
         this.$router.push(nav.path)
       }
     },
-    changeParentNavsSelected(nav) {
+    walkNavsFromBottomToTop(nav, cb) {
       let parent = nav.parent
       while (parent) {
-        parent.selected = nav.selected
+        if (typeof cb === 'function') {
+          cb(parent)
+        }
         parent = parent.parent
       }
     },
@@ -120,11 +138,11 @@ i
 <style lang="scss" scoped>
 .home {
   overflow: hidden;
-  min-height: 100vh;
   max-width: $screen_md;
   margin: 0 auto;
-  display: flex;
-
+  .row {
+    min-height: calc(100vh - 16px);
+  }
   .left-navs {
     &_items {
       width: $left_navs_width;
@@ -159,6 +177,17 @@ i
 
   .chevron-up {
     transform: rotate(180deg);
+  }
+
+  .border-left {
+    border-left: 2px solid $orange-300;
+  }
+  @media screen and (max-width: $screen_sm) {
+    .left-navs {
+      &_items {
+        width: 100%;
+      }
+    }
   }
 }
 </style>

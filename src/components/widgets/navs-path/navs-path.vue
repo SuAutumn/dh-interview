@@ -1,6 +1,9 @@
 <template>
-  <div class="flex">
-    <div v-for="(p, i) in paths" :key="i">{{ p }}</div>
+  <div class="flex font-size-12">
+    <div v-for="(p, i) in paths" :key="i" class="path">
+      {{ p }}
+      <i class="bi-chevron-right mh-4"></i>
+    </div>
   </div>
 </template>
 
@@ -32,3 +35,14 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.path {
+
+  &:last-child {
+    .bi-chevron-right {
+      display: none;
+    }
+  }
+}
+</style>
