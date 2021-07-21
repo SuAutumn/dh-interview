@@ -3922,6 +3922,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.nlark.com/boolbase/download/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bootstrap-icons@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.nlark.com/bootstrap-icons/download/bootstrap-icons-1.5.0.tgz#2cb19da148aa9105cb3174de2963564982d3dc55"
+  integrity sha1-LLGdoUiqkQXLMXTeKWNWSYLT3FU=
+
 bootstrap@^5.0.2:
   version "5.0.2"
   resolved "https://registry.nlark.com/bootstrap/download/bootstrap-5.0.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fbootstrap%2Fdownload%2Fbootstrap-5.0.2.tgz#aff23d5e0e03c31255ad437530ee6556e78e728e"

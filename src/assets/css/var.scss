@@ -6,22 +6,23 @@ $default_margin: $default_padding;
 $default_radius: $default_padding / 1.5;
 $default_font_size: 14;
 
-$left-navs-width: 240px;
+$left_navs_width: 240px;
 
 // screen width
-$screen-xs: 768px;
-$screen-sm: 768px;
-$screen-md: 992px;
-$screen-lg: 1200px;
+$screen_xs: 768px;
+$screen_sm: 768px;
+$screen_md: 992px;
+$screen_lg: 1200px;
 
 // color
 $gray: $gray-500;
 $white: $white;
 $primary: $primary;
-$bg-color: #f0f0f0;
+$dark: #333;
 
 // text color
 $text_white: $white;
+$text_dark: $dark;
 
 // text size
 $text_default_size: 14px;

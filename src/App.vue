@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  created () {
+  created() {
     this.setRem()
   },
   methods: {
-    setRem () {
+    setRem() {
       document.documentElement.style.fontSize = '14px'
     },
   },
@@ -23,6 +23,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  background: $bg-color;
+  background: $white;
+
+  a {
+    text-decoration: none;
+    color: unset;
+  }
 }
 </style>
