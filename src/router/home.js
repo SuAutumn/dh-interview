@@ -48,7 +48,8 @@ export default {
           meta: {
             name: 'Completed',
           },
-        },{
+        },
+        {
           path: 'canceled',
           name: 'Canceled',
           component: Upcoming,

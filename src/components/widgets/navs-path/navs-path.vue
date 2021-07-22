@@ -38,7 +38,6 @@ export default {
 
 <style lang="scss" scoped>
 .path {
-
   &:last-child {
     .bi-chevron-right {
       display: none;

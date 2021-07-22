@@ -1,7 +1,7 @@
 <template>
   <div
     class="collapse"
-    :class="{ show: show}"
+    :class="{ show: show }"
     :style="{ height: height + 'px' }"
   >
     <div class="collapse-content">
