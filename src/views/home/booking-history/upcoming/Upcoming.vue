@@ -10,7 +10,7 @@
       </div>
       <div class="container p-0 border-bottom-3">
         <div class="basic-info text-gray pt-3 pb-3 row">
-          <div class="col-8 pr-12">
+          <div class="col-sm-8 pr-12">
             <div class="flex mb-2">
               <div>
                 <div>Contact Name</div>
@@ -25,27 +25,27 @@
               <div class="text">Service Address</div>
               <div class="text-gray-600">12 West St, Canley Vale, NSW 2166</div>
             </div>
-            <div>
+            <div class="mb-2">
               <div>Service Time</div>
               <div class="text-gray-600">
                 Morning 8AM-11AM, 11 December 2021
               </div>
             </div>
           </div>
-          <div class="col-4 flex-col flex-h-between refund">
+          <div class="col-sm-4 flex-col flex-h-between refund">
             <div class="text-orange">Full Refund</div>
-            <div>
+            <div class="paid">
               Amount Paid
               <i class="bi-question-circle-fill font-size-12"></i>
               <div class="font-size-20">
-                <span>$50</span>
+                <span class="text-gray-600">$50</span>
               </div>
             </div>
-            <div>
+            <div class="refund-val">
               Refunded
               <i class="bi-question-circle-fill font-size-12"></i>
               <div class="font-size-20">
-                <span>$50</span>
+                <span class="text-gray-600">$50</span>
               </div>
             </div>
           </div>
@@ -87,7 +87,17 @@ export default {
 @media screen and (max-width: $screen_sm) {
   .book-info {
     .refund {
-      padding-left: 8px;
+      padding-top: .5rem;
+      padding-left: calc(var(--bs-gutter-x) * .5);
+      border-left: none;
+      border-top: 1px solid $gray-300;
+      display: block;
+      .paid, .refund-val {
+        display: inline-block;
+      }
+      .refund-val {
+        margin-left: 1/6 * 100%;
+      }
     }
   }
 }

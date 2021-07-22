@@ -1,8 +1,8 @@
 // import css
-import '@/assets/css/normalize.css'
-import '@/assets/css/index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import '@/assets/css/normalize.css'
+import '@/assets/css/index.scss'
 
 import Vue from 'vue'
 import App from './App.vue'

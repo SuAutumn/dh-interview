@@ -4,7 +4,7 @@
       <div class="fs-5 fw-bold">Title</div>
       <i class="bi-list font-size-28" @click="triggleNavs"></i>
     </div>
-    <div class="row ph-8">
+    <div class="row">
       <div
         class="left-navs_items fs-5 lh-lg bg-white p-8"
         :class="{ 'sm-hide': !isShowNavs }"
@@ -42,7 +42,7 @@
           </collapse>
         </div>
       </div>
-      <div class="left-navs_content p-16 bg-white ml-8 ml-xs-0">
+      <div class="left-navs_content bg-white">
         <navs-path class="pb-8"></navs-path>
         <router-view></router-view>
       </div>
@@ -152,10 +152,9 @@ i
   overflow: hidden;
   max-width: $screen_lg;
   margin: 0 auto;
-  padding: 8px 0;
 
   .row {
-    min-height: calc(100vh - 16px);
+    min-height: 100vh;
   }
 
   .left-navs {
@@ -163,6 +162,11 @@ i
       width: $left_navs_width;
       flex-shrink: 0;
       color: $text_dark;
+      border-right: 1px solid $gray-300;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      overflow-y: auto;
     }
 
     &_item {
@@ -183,6 +187,8 @@ i
 
     &_content {
       flex: 1;
+      padding: 1rem 2rem;
+      margin-left: $left_navs_width;
     }
   }
 
@@ -226,6 +232,7 @@ i
       }
       &_content {
         margin-top: 44px;
+        margin-left: 0;
       }
     }
 
