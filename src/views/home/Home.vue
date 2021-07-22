@@ -1,7 +1,14 @@
 <template>
-  <div class="home p-8 container">
-    <div class="row flex flex-v-stretch">
-      <div class="left-navs_items fs-5 lh-lg bg-white p-8 col-xs-12">
+  <div class="home container">
+    <div class="navs-bar bg-white flex-h-between ph-8 border-bottom-1">
+      <div class="fs-5 fw-bold">Title</div>
+      <i class="bi-list font-size-28" @click="triggleNavs"></i>
+    </div>
+    <div class="row ph-8">
+      <div
+        class="left-navs_items fs-5 lh-lg bg-white p-8"
+        :class="{ 'sm-hide': !isShowNavs }"
+      >
         <div
           class="left-navs_item"
           v-for="nav in navs"
@@ -35,7 +42,7 @@
           </collapse>
         </div>
       </div>
-      <div class="left-navs_content p-16 bg-white ml-8 col-xs-12 ml-xs-0">
+      <div class="left-navs_content p-16 bg-white ml-8 ml-xs-0">
         <navs-path class="pb-8"></navs-path>
         <router-view></router-view>
       </div>
@@ -67,6 +74,7 @@ export default {
     this._currentNav = null
     return {
       navs: [],
+      isShowNavs: false, // 移动端展示
     }
   },
   methods: {
@@ -119,6 +127,7 @@ export default {
           (parent) => (parent.selected = this._currentNav.selected)
         )
         this.$router.push(nav.path)
+        this.triggleNavs()
       }
     },
     walkNavsFromBottomToTop(nav, cb) {
@@ -130,6 +139,9 @@ export default {
         parent = parent.parent
       }
     },
+    triggleNavs() {
+      this.isShowNavs = !this.isShowNavs
+    },
   },
 }
 </script>
@@ -138,11 +150,14 @@ i
 <style lang="scss" scoped>
 .home {
   overflow: hidden;
-  max-width: $screen_md;
+  max-width: $screen_lg;
   margin: 0 auto;
+  padding: 8px 0;
+
   .row {
     min-height: calc(100vh - 16px);
   }
+
   .left-navs {
     &_items {
       width: $left_navs_width;
@@ -182,11 +197,46 @@ i
   .border-left {
     border-left: 2px solid $orange-300;
   }
-  @media screen and (max-width: $screen_sm) {
+
+  .navs-bar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $screen_sm) {
+  .home {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .row {
+      min-height: 100vh;
+    }
+
     .left-navs {
       &_items {
         width: 100%;
+        position: fixed;
+        top: 44px;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 $default_margin $gray-600;
+        &.sm-hide {
+          display: none;
+        }
       }
+      &_content {
+        margin-top: 44px;
+      }
+    }
+
+    .navs-bar {
+      display: flex;
+      height: 44px;
+      line-height: 44px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
     }
   }
 }

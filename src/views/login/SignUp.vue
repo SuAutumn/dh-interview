@@ -1,61 +1,71 @@
 <template>
-  <div class="sign-up p-16">
-    <div class="row">
-      <div class="col-md-6 col-xs-12">
-        <h1 class="pb-16 fw-bold">Register a new account</h1>
-      </div>
-      <div class="col-md-6 col-xs-12">
-        <form v-if="!isShowConfirmUI">
-          <div class="mb-3">
-            <label for="input-username" class="form-label"
-              >Email or phone number</label
+  <div class="sign-up">
+    <div class="container bg-white">
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <h1 class="pb-16 fw-bold">Register a new account</h1>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <form v-if="!isShowConfirmUI">
+            <div class="mb-3">
+              <label for="input-username" class="form-label"
+                >Email or phone number</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="input-username"
+                v-model="username"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="input-password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="input-password"
+                v-model="password"
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary col-12"
+              @click="signUp"
             >
-            <input
-              type="text"
-              class="form-control"
-              id="input-username"
-              v-model="username"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="input-password" class="form-label">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="input-password"
-              v-model="password"
-            />
-          </div>
-          <button type="button" class="btn btn-primary col-12" @click="signUp">
-            Sign Up
+              Sign Up
+            </button>
+          </form>
+          <form v-else>
+            <div class="mb-3">
+              <label for="input-code" class="form-label">Confirm code</label>
+              <input
+                type="text"
+                class="form-control"
+                id="input-code"
+                v-model="confirmCode"
+                aria-describedby="help-confirm"
+              />
+              <p class="help-block pt-1" id="help-confirm">
+                Confirm code will be sended in 10 minutes.
+              </p>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary col-12"
+              @click="signIn"
+            >
+              Submit
+            </button>
+          </form>
+          <divider>or</divider>
+          <button
+            type="button"
+            class="btn btn-outline-primary col-12"
+            @click="$router.back()"
+          >
+            Have a account? Back to sign in
           </button>
-        </form>
-        <form v-else>
-          <div class="mb-3">
-            <label for="input-code" class="form-label">Confirm code</label>
-            <input
-              type="text"
-              class="form-control"
-              id="input-code"
-              v-model="confirmCode"
-              aria-describedby="help-confirm"
-            />
-            <p class="help-block pt-1" id="help-confirm">
-              Confirm code will be sended in 10 minutes.
-            </p>
-          </div>
-          <button type="submit" class="btn btn-primary col-12" @click="signIn">
-            Submit
-          </button>
-        </form>
-        <divider>or</divider>
-        <button
-          type="button"
-          class="btn btn-outline-primary col-12"
-          @click="$router.back()"
-        >
-          Have a account? Back to sign in
-        </button>
+        </div>
       </div>
     </div>
   </div>
@@ -102,5 +112,26 @@ export default {
 .sign-up {
   max-width: $screen_sm;
   margin: 0 auto;
+  padding: 5rem 0;
+  min-height: 100vh;
+  background-color: $default_bg;
+
+  .container {
+    border-radius: $default_margin;
+    box-shadow: 0 0 $default_margin $gray-400;
+    padding: $default_padding * 3;
+  }
+}
+
+@media screen and (max-width: $screen_sm) {
+  .sign-up {
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+
+    .container {
+      box-shadow: none;
+    }
+  }
 }
 </style>
