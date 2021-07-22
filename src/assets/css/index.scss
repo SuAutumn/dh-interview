@@ -16,7 +16,7 @@
 @for $i from 0 through 30 {
   @if $i >= 12 {
     .font-size-#{$i} {
-      font-size: 1px * $i;
+      font-size: $i/$default_font_size * 1rem;
     }
   }
   .m-#{$i} {

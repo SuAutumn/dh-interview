@@ -9,10 +9,10 @@ $default_font_size: 14;
 $left_navs_width: 240px;
 
 // screen width
-$screen_xs: 768px;
-$screen_sm: 768px;
-$screen_md: 992px;
-$screen_lg: 1200px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
 
 // color
 $gray: $gray-500;
@@ -28,6 +28,8 @@ $text_dark: $dark;
 // text size
 $text_default_size: 14px;
 
-export {
-  $default_font_size: $default_font_size
+:export {
+  defaultFontSize: $default_font_size;
+  screenSm: $screen_sm;
+  screenMd: $screen_md;
 }

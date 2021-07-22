@@ -5,13 +5,18 @@
 </template>
 
 <script>
+import { defaultFontSize, screenSm } from '@/assets/css/var.scss'
 export default {
   created() {
     this.setRem()
+    window.addEventListener('resize', this.setRem)
   },
   methods: {
     setRem() {
-      document.documentElement.style.fontSize = '14px'
+      const w = window.innerWidth
+      const size =
+        w <= parseInt(screenSm) ? (defaultFontSize / 375) * w : defaultFontSize
+      document.documentElement.style.fontSize = size + 'px'
     },
   },
 }
