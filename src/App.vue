@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     setRem() {
-      const w = window.innerWidth
+      const w = document.documentElement.clientWidth
       const size =
         w <= parseInt(screenSm) ? (defaultFontSize / 375) * w : defaultFontSize
       document.documentElement.style.fontSize = size + 'px'
